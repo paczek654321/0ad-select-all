@@ -1,0 +1,16 @@
+{
+	"categories": {
+		"select_all": {
+			"name": "Select all",
+			"desc": "Hotkeys relating to the select all mod."
+		}
+	},
+	"mapped_hotkeys": {
+		"select_all": {
+			"select_all.keybind": {
+				"name": "Select all",
+				"desc": "Add all units to current selection."
+			}
+		}
+	}
+}

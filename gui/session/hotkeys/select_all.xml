@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object>
+	<object hotkey="select_all.keybind">
+		<action on="Press">select_all();</action>
+	</object>
+</object>
