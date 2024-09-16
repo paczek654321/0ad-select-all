@@ -11,3 +11,10 @@ function select_all()
     }
     g_Selection.addList(toAdd)
 }
+(function checkBind()
+{
+    if (Engine.GetHotkeyMap()["select_all.keybind"] === undefined)
+    {
+        warn("Select all: WARNING the \"Select all\" keybind is not set")
+    }
+})()
