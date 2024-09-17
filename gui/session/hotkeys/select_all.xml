@@ -9,7 +9,7 @@
 	<object hotkey="select_all.buildings">
 		<action on="Press">select_all("buildings");</action>
 	</object>
-	<object>
-		<action on="Load">select_all_load();</action>
+	<object name="selectAll">
+		<action on="Tick">select_all_load();</action>
 	</object>
 </object>

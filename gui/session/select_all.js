@@ -51,7 +51,6 @@ function buildings(entities)
 
 function select_all_load()
 {
-    (new SelectAllNoHotkeySet()).display()
     if
     (
         Engine.GetHotkeyMap()["select_all.units"] === undefined&&
@@ -59,6 +58,7 @@ function select_all_load()
         Engine.GetHotkeyMap()["select_all.buildings"] === undefined
     )
     {
-        warn("Select all: None of the keybinds are set!")
+        (new SelectAllNoHotkeySet()).display()
     }
+    delete Engine.GetGUIObjectByName("selectAll").onTick
 }
