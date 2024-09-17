@@ -7,9 +7,17 @@
 	},
 	"mapped_hotkeys": {
 		"select_all": {
-			"select_all.keybind": {
-				"name": "Select all",
+			"select_all.units": {
+				"name": "Select all units",
 				"desc": "Add all units to current selection."
+			},
+			"select_all.men": {
+				"name": "Select all men",
+				"desc": "Add all male units to current selection."
+			},
+			"select_all.buildings": {
+				"name": "Select all buildings",
+				"desc": "Add all buildings to current selection."
 			}
 		}
 	}

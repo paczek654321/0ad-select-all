@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object>
-	<object hotkey="select_all.keybind">
-		<action on="Press">select_all();</action>
+	<object hotkey="select_all.units">
+		<action on="Press">select_all("units");</action>
+	</object>
+	<object hotkey="select_all.men">
+		<action on="Press">select_all("men");</action>
+	</object>
+	<object hotkey="select_all.buildings">
+		<action on="Press">select_all("buildings");</action>
+	</object>
+	<object>
+		<action on="Load">select_all_load();</action>
 	</object>
 </object>
