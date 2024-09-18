@@ -56,7 +56,7 @@ function idle(entities)
     let out = []
     for (let ent of entities)
     {
-        if (unitFilters["isUnit"](ent)&&unitFilters["isIdle"](ent))
+        if (unitFilters["isIdle"](ent))
         {
             out.push(+ent)
         }
@@ -68,7 +68,8 @@ function wounded(entities)
     let out = []
     for (let ent of entities)
     {
-        if (unitFilters["isUnit"](ent)&&unitFilters["isWounded"](ent))
+        let entState = GetEntityState(ent);
+        if (hasClass(entState, "Unit")&&entState.hitpoints < entState.maxHitpoints)
         {
             out.push(+ent)
         }
