@@ -9,6 +9,15 @@
 	<object hotkey="select_all.buildings">
 		<action on="Press">select_all("buildings");</action>
 	</object>
+	<object hotkey="select_all.warriors">
+		<action on="Press">select_all("warriors");</action>
+	</object>
+	<object hotkey="select_all.idle">
+		<action on="Press">select_all("idle");</action>
+	</object>
+	<object hotkey="select_all.wounded">
+		<action on="Press">select_all("wounded");</action>
+	</object>
 	<object name="selectAll">
 		<action on="Tick">select_all_load();</action>
 	</object>

@@ -7,6 +7,9 @@ function select_all(filter)
         case "men": toAdd = men(entities); break
         case "units": toAdd = units(entities); break
         case "buildings": toAdd = buildings(entities); break
+        case "warriors": toAdd = warriors(entities); break
+        case "idle": toAdd = idle(entities); break
+        case "wounded": toAdd = wounded(entities); break
     }
     g_Selection.reset();
     g_Selection.addList(toAdd)
@@ -30,6 +33,42 @@ function units(entities)
     for (let ent of entities)
     {
         if (unitFilters["isUnit"](ent))
+        {
+            out.push(+ent)
+        }
+    }
+    return out
+}
+function warriors(entities)
+{
+    let out = []
+    for (let ent of entities)
+    {
+        if (unitFilters["isUnit"](ent)&&!hasClass(GetEntityState(ent), "Worker"))
+        {
+            out.push(+ent)
+        }
+    }
+    return out
+}
+function idle(entities)
+{
+    let out = []
+    for (let ent of entities)
+    {
+        if (unitFilters["isUnit"](ent)&&unitFilters["isIdle"](ent))
+        {
+            out.push(+ent)
+        }
+    }
+    return out
+}
+function wounded(entities)
+{
+    let out = []
+    for (let ent of entities)
+    {
+        if (unitFilters["isUnit"](ent)&&unitFilters["isWounded"](ent))
         {
             out.push(+ent)
         }
@@ -60,7 +99,10 @@ function select_all_load()
     (
         Engine.GetHotkeyMap()["select_all.units"] === undefined&&
         Engine.GetHotkeyMap()["select_all.men"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.buildings"] === undefined
+        Engine.GetHotkeyMap()["select_all.buildings"] === undefined&&
+        Engine.GetHotkeyMap()["select_all.warriors"] === undefined&&
+        Engine.GetHotkeyMap()["select_all.idle"] === undefined&&
+        Engine.GetHotkeyMap()["select_all.wounded"] === undefined
     )
     {
         (new SelectAllNoHotkeySet()).display()
