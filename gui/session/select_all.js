@@ -41,7 +41,12 @@ function buildings(entities)
     let out = []
     for (let ent of entities)
     {
-        if (!unitFilters["isUnit"](ent))
+        if
+        (
+            GetEntityState(ent).identity&&
+            !unitFilters["isUnit"](ent)&&
+            !hasClass(GetEntityState(ent), "Formation")
+        )
         {
             out.push(+ent)
         }
