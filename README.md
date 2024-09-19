@@ -1,6 +1,6 @@
 # FAQ
 ## What does this mod add?
-This mod grants you the ability to select all of your units no matter where they are, there are 3 categories of units that you can select:
+This mod grants you the ability to select all of your units no matter where they are, there are 6 categories of units that you can select:
 - all - men, women, horses, all of them.
 - men - all non-female units.
 - idle - all idle units.
