@@ -10,9 +10,34 @@ function select_all(filter)
         case "warriors": toAdd = warriors(entities); break
         case "idle": toAdd = idle(entities); break
         case "wounded": toAdd = wounded(entities); break
+        case "food": toAdd = gatherers(entities, "food"); break
+        case "wood": toAdd = gatherers(entities, "wood"); break
+        case "stone": toAdd = gatherers(entities, "stone"); break
+        case "metal": toAdd = gatherers(entities, "metal"); break
     }
     g_Selection.reset();
     g_Selection.addList(toAdd)
+}
+
+
+function gatherers(entities, resource)
+{
+    let out = []
+	for (let ent of entities)
+    {
+        if (unitFilters["isUnit"](ent)&&hasClass(GetEntityState(ent), "Worker")&&!unitFilters["isIdle"](ent))
+        {
+            for (let order of GetEntityState(ent).unitAI["orders"])
+            {
+                if (order["type"] === "Gather"&&order.data.type.generic === resource)
+                {
+                    out.push(+ent)
+                    break
+                }
+            }
+        }
+    }
+    return out
 }
 
 function men(entities)

@@ -8,28 +8,44 @@
 	"mapped_hotkeys": {
 		"select_all": {
 			"select_all.units": {
-				"name": "Select all units",
-				"desc": "Add all units to current selection."
+				"name": "All",
+				"desc": "Select all units"
 			},
 			"select_all.men": {
-				"name": "Select all men",
-				"desc": "Add all non-female units to current selection."
+				"name": "Men",
+				"desc": "Select all non-female units."
 			},
 			"select_all.idle": {
-				"name": "Select all idle units",
-				"desc": "Add all idle units to current selection."
+				"name": "Idle",
+				"desc": "Select all idle units"
 			},
 			"select_all.wounded": {
-				"name": "Select all wounded",
-				"desc": "Add all wounded units to current selection."
+				"name": "Wounded",
+				"desc": "Select all wounded units."
 			},
 			"select_all.warriors": {
-				"name": "Select all wariors",
-				"desc": "Add all non-worker units to current selction."
+				"name": "Wariors",
+				"desc": "Select all non-worker units."
 			},
 			"select_all.buildings": {
-				"name": "Select all buildings",
-				"desc": "Add all buildings to current selection."
+				"name": "Buildings",
+				"desc": "Select all buildings."
+			},
+			"select_all.food": {
+				"name": "Gathering food",
+				"desc": "Select all units gathering food."
+			},
+			"select_all.wood": {
+				"name": "Gathering wood",
+				"desc": "Select all units gathering wood."
+			},
+			"select_all.stone": {
+				"name": "Gathering stone",
+				"desc": "Select all units gathering stone."
+			},
+			"select_all.metal": {
+				"name": "Gathering metal",
+				"desc": "Select all units gathering metal."
 			}
 		}
 	}
