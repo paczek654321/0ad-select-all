@@ -15,3 +15,5 @@ Download a zip file from the releases tab and open it with 0ad (right click → 
 The mod does not set your hotkeys automatically, you have to set them manually in the game settings.
 ## I can only select 200 units at once, why?
 This limit is hard coded into the game, I could probably bypass it but that feels like cheating to me.
+## The "count" hotkey doesn't work when units are in a formation. how to change that?
+To disable formations being selected as a whole go to: Options→Game Session→Battalion-style formations.

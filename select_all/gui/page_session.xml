@@ -15,7 +15,7 @@
 	<include>session/sprites.xml</include>
 	<include>session/styles.xml</include>
 
-	<include>select_all_choose_number/select_all_choose_number.xml</include>
+	<include>select_all_count_dialog/select_all_count_dialog.xml</include>
 
 	<include>session/session.xml</include>
 </page>

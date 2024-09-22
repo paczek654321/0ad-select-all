@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-    <script file="gui/select_all_choose_number/select_all_choose_number.js"/>
+    <script file="gui/select_all_count_dialog/select_all_count_dialog.js"/>
 	<object name="select_all_count_dialog" hidden="true">
 		<object
 			style="ModernDialog"
@@ -14,26 +14,25 @@
 			caption="How many units to select?"
 		/>
 		<object
-			name="select_all_count_ok"
 			style="ModernButtonRed"
 			type="button"
 			caption="OK"
 			size="46% 54% 54% 58%"
 		>
-			<action on="Press">select_all_OK();</action>
+			<action on="Press">select_all_count_selects();</action>
 		</object>
 		<object size="50%-29 50%-16 50%+29 50%+16">
 			<object type="button" size="4 0 36 100%" style="StoneButton">
 				<object type="image" ghost="true"/>
 				<object type="image" sprite="stretched:session/icons/corners.png" ghost="true"/>
-				<object name="select_all_number_label" type="text" style="ModernLabelText" ghost="true" caption="1"/>
+				<object name="select_all_count_label" type="text" style="ModernLabelText" ghost="true" caption="1"/>
 			</object>
 			<object type="button" size="36 0 52 50%" style="iconButton">
-				<action on="Press">select_all_INCREASE();</action>
+				<action on="Press">select_all_count_change(1);</action>
 				<object type="image" sprite="StoneArrowUp" ghost="true"/>
 			</object>
 			<object type="button" size="36 50% 52 100%" style="iconButton">
-				<action on="Press">select_all_DECREASE();</action>
+				<action on="Press">select_all_count_change(-1);</action>
 				<object type="image" sprite="StoneArrowDn" ghost="true"/>
 			</object>
 		</object>
