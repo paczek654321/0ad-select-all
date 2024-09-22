@@ -2,9 +2,8 @@ function init(){}
 
 function select_all_OK()
 {
-    let size = Number(Engine.GetGUIObjectByName("select_all_number_label").caption)
     Engine.GetGUIObjectByName("select_all_count_dialog").hidden = true
-    //Engine.PopGuiPage()
+    let size = Number(Engine.GetGUIObjectByName("select_all_number_label").caption)
     let selection = g_Selection.toList()
     size = Math.min(size, selection.length)
     let toAdd = []

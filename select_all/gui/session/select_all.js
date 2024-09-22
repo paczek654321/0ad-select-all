@@ -153,6 +153,5 @@ function select_all_load()
 
 async function select_all_count_show_popup()
 {
-    //Engine.PushGuiPage("page_select_all_choose_number.xml")
     Engine.GetGUIObjectByName("select_all_count_dialog").hidden = false
 }
