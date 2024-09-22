@@ -13,3 +13,5 @@ This mod grants you the ability to select all of your units no matter where they
 Download a zip file from the releases tab and open it with 0ad (right click → open with → search for 0ad).
 ## The mod is warning me that I have no hotkeys set, why?
 The mod does not set your hotkeys automatically, you have to set them manually in the game settings.
+## I can only select 200 units at once, why?
+This limit is hard coded into the game, I could probably bypass it but that feels like cheating to me.
