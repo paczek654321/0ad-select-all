@@ -121,17 +121,38 @@ function buildings(entities)
 
 function select_all_load()
 {
-    if
-    (
-        Engine.GetHotkeyMap()["select_all.units"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.men"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.buildings"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.warriors"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.idle"] === undefined&&
-        Engine.GetHotkeyMap()["select_all.wounded"] === undefined
-    )
+    let keybinds =
+    [
+        "select_all.units",
+		"select_all.men",
+		"select_all.idle",
+		"select_all.wounded",
+		"select_all.warriors",
+		"select_all.buildings",
+		"select_all.food",
+		"select_all.wood",
+        "select_all.stone",
+        "select_all.metal",
+        "select_all.count"
+    ]
+    let none_set = true
+    for (let bind of keybinds)
+    {
+        if (Engine.GetHotkeyMap()[bind] !== undefined)
+        {
+            none_set = false
+            break
+        }
+    }
+    if (none_set)
     {
         (new SelectAllNoHotkeySet()).display()
     }
     delete Engine.GetGUIObjectByName("selectAll").onTick
+}
+
+async function select_all_count_show_popup()
+{
+    //Engine.PushGuiPage("page_select_all_choose_number.xml")
+    Engine.GetGUIObjectByName("select_all_count_dialog").hidden = false
 }

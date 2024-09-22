@@ -46,6 +46,10 @@
 			"select_all.metal": {
 				"name": "Gathering metal",
 				"desc": "Select all units gathering metal."
+			},
+			"select_all.count": {
+				"name": "Count",
+				"desc": "Select a chosen number of units from your current selection."
 			}
 		}
 	}

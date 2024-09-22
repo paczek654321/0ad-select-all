@@ -30,6 +30,11 @@
 	<object hotkey="select_all.metal">
 		<action on="Press">select_all("metal");</action>
 	</object>
+	<object hotkey="select_all.count">
+		<action on="Press">
+			select_all_count_show_popup();
+		</action>
+	</object>
 	<object name="selectAll">
 		<action on="Tick">select_all_load();</action>
 	</object>
