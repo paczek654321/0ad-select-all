@@ -4,5 +4,5 @@
 	"label": "Select all",
 	"url": "https://github.com/paczek654321/0ad-select-all",
 	"description": "A mod that allows you to select all your units",
-	"dependencies": ["0ad=0.27.0"]
+	"dependencies": ["0ad>=0.27.0"]
 }

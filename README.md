@@ -8,7 +8,7 @@ This mod grants you the ability to select all of your units no matter where they
 - warriors - all non-worker units.
 - buildings - instead of selecting units this one selects all of your buildings.
 - 4 categories for selecting units that are currently collecting a resource.
-- count - selects a chosen number of units from current selection.
+- you can also refine your selection based on unit activity and number of units.
 ## How to install?
 Download a zip file from the releases tab and open it with 0ad (right click → open with → search for 0ad).
 ## The mod is warning me that I have no hotkeys set, why?

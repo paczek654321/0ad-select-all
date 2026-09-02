@@ -2,39 +2,62 @@
 <objects>
     <script file="gui/select_all_count_dialog/select_all_count_dialog.js"/>
 	<object name="select_all_count_dialog" hidden="true">
-		<object
-			style="ModernDialog"
-			type="image"
-			size="40% 40% 60% 60%"
-		/>
-		<object
-			style="ModernLabelText"
-			type="text"
-			size="40% 40%-7 60% 40%+7"
-			caption="How many units to select?"
-		/>
-		<object
-			style="ModernButtonRed"
-			type="button"
-			caption="OK"
-			size="46% 54% 54% 58%"
-		>
-			<action on="Press">select_all_count_selects();</action>
+		
+		<object style="ModernDialog" type="image" size="35% 35% 65% 60%"/>
+		<object type="text" style="ModernLabelText" size="35% 35%-8 65% 35%+4" caption="Refine your selection"/>
+
+		<object size="37% 37%+10 50% 37%+30">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Idle"/>
+			<object type="checkbox" name="select_all_idle_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select idle units"/>
 		</object>
-		<object size="50%-29 50%-16 50%+29 50%+16">
+		<object size="37% 37%+35 50% 37%+55">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering food"/>
+			<object type="checkbox" name="select_all_food_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering food."/>
+		</object>
+		<object size="37% 37%+60 50% 37%+80">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering wood"/>
+			<object type="checkbox" name="select_all_wood_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering wood."/>
+		</object>
+		<object size="37% 37%+85 50% 37%+105">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering stone"/>
+			<object type="checkbox" name="select_all_stone_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering stone."/>
+		</object>
+		<object size="37% 37%+110 50% 37%+130">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering metal"/>
+			<object type="checkbox" name="select_all_metal_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering metal."/>
+		</object>
+		
+		<object type="text" style="ModernLabelText" size="50%+10 37%+35 63% 37%+55" caption="How many units to select?"/>
+		
+		<object size="50%+25 37%+79 50%+63 37%+111">
 			<object type="button" size="4 0 36 100%" style="StoneButton">
 				<object type="image" ghost="true"/>
 				<object type="image" sprite="stretched:session/icons/corners.png" ghost="true"/>
 				<object name="select_all_count_label" type="text" style="ModernLabelText" ghost="true" caption="1"/>
 			</object>
-			<object type="button" size="36 0 52 50%" style="iconButton">
+			<object type="button" name="select_all_arrow_up" size="36 0 52 50%" style="iconButton">
 				<action on="Press">select_all_count_change(1);</action>
 				<object type="image" sprite="StoneArrowUp" ghost="true"/>
 			</object>
-			<object type="button" size="36 50% 52 100%" style="iconButton">
+			<object type="button" name="select_all_arrow_down" size="36 50% 52 100%" style="iconButton">
 				<action on="Press">select_all_count_change(-1);</action>
 				<object type="image" sprite="StoneArrowDn" ghost="true"/>
 			</object>
 		</object>
+		
+		<object size="50%+95 37%+85 63% 37%+105">
+			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="All"/>
+			<object type="checkbox" name="select_all_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select all units regardless of number.">
+				<action on="Press">select_all_count_toggle();</action>
+			</object>
+		</object>
+
+		<object style="ModernButtonRed" type="button" caption="Cancel" size="35%+20 60%-48 50%-5 60%-20"> 
+			<action on="Press">select_all_count_cancel();</action>
+		</object>		
+		<object style="ModernButtonRed" type="button" caption="OK" size="50%+5 60%-48 65%-20 60%-20">
+			<action on="Press">select_all_count_selects();</action>
+		</object>
+		
 	</object>
 </objects>
